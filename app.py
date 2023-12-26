@@ -30,6 +30,7 @@ def register():
 
 @api.route('/login', methods=['GET', 'POST'])
 def login():
+    global logged
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -65,6 +66,7 @@ def add():
 
 @api.route('/get_cars')
 def get_cars():
+    global logged
     if not logged:
         return redirect(url_for('login'))
     # Fetch data from the database

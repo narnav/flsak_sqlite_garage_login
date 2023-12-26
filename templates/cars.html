@@ -13,7 +13,7 @@
     {% for car in cars %}
     <tr>
       <td>{{ car[0] }}</td>
-      <td>{{ car[1] }}</td>
+      <td><img src="{{ car[1] }}"></td>
       <td>{{ car[2] }}</td>
       <td>{{ car[3] }}
         <form action="/delete_car/{{ car[3] }}" method="post">
